@@ -1,0 +1,21 @@
+.memslider{
+  width: fit-content;
+}
+
+.memslider__wrapper{
+  width: 77vw;
+  height: 576px;
+}
+
+.memslider__slides{
+  width: 308vh;
+  height: 576px;
+  overflow: hidden;
+
+}
+
+.memslider__slide > img{
+  display: block;
+  width: 77vw;
+  height: auto;
+}
