@@ -1,4 +1,6 @@
 .memslider {
+  display: flex;
+  flex-wrap: wrap-reverse;
   width: 77vw;
 }
 
@@ -12,6 +14,7 @@
   width: 308vh;
   height: 576px;
   display: flex;
+  transition: all 0.5s ease;
 }
 
 .memslider__slide > img {
@@ -25,19 +28,19 @@ input[type="radio"] {
 }
 
 #mem1:checked ~ .memslider__wrapper .memslider__slides {
-  margin-left: 0%;
+  transform: translateX(0);
 }
 
 #mem2:checked ~ .memslider__wrapper .memslider__slides {
-  margin-left: -100%;
+  transform: translateX(-77vw);
 }
 
 #mem3:checked ~ .memslider__wrapper .memslider__slides {
-  margin-left: -200%;
+  transform: translateX(-154vw);
 }
 
 #mem4:checked ~ .memslider__wrapper .memslider__slides {
-  margin-left: -300%;
+  transform: translateX(-231vw);
 }
 
 #mem1:checked ~ .label1 > .label-radio1 {
