@@ -1,18 +1,14 @@
 .memslider {
-  display: flex;
-  flex-wrap: wrap-reverse;
   width: 77vw;
 }
 
 .memslider__wrapper {
   width: 77vw;
-  height: 576px;
   overflow: hidden;
 }
 
 .memslider__slides {
   width: 308vh;
-  height: 576px;
   display: flex;
   transition: all 0.5s ease;
 }
@@ -44,19 +40,19 @@ input[type="radio"] {
 }
 
 #mem1:checked ~ .label1 > .label-radio1 {
-  background-color: brown;
+  background-color: transparent;
 }
 
 #mem2:checked ~ .label2 > .label-radio2 {
-  background-color: brown;
+  background-color: transparent;
 }
 
 #mem3:checked ~ .label3 > .label-radio3 {
-  background-color: brown;
+  background-color: transparent;
 }
 
 #mem4:checked ~ .label4 > .label-radio4 {
-  background-color: brown;
+  background-color: transparent;
 }
 
 .memslider__label-radio {
@@ -64,7 +60,8 @@ input[type="radio"] {
   height: 15px;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid brown;
+  border: 2px solid brown;
+  background-color: brown;
   cursor: pointer;
   margin: 0 auto;
   font-size: 0;
