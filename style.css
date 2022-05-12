@@ -1,21 +1,78 @@
-.memslider{
-  width: fit-content;
+.memslider {
+  width: 77vw;
 }
 
-.memslider__wrapper{
+.memslider__wrapper {
   width: 77vw;
   height: 576px;
+  overflow: hidden;
 }
 
-.memslider__slides{
+.memslider__slides {
   width: 308vh;
   height: 576px;
-  overflow: hidden;
-
+  display: flex;
 }
 
-.memslider__slide > img{
+.memslider__slide > img {
   display: block;
   width: 77vw;
   height: auto;
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+#mem1:checked ~ .memslider__wrapper .memslider__slides {
+  margin-left: 0%;
+}
+
+#mem2:checked ~ .memslider__wrapper .memslider__slides {
+  margin-left: -100%;
+}
+
+#mem3:checked ~ .memslider__wrapper .memslider__slides {
+  margin-left: -200%;
+}
+
+#mem4:checked ~ .memslider__wrapper .memslider__slides {
+  margin-left: -300%;
+}
+
+#mem1:checked ~ .label1 > .label-radio1 {
+  background-color: brown;
+}
+
+#mem2:checked ~ .label2 > .label-radio2 {
+  background-color: brown;
+}
+
+#mem3:checked ~ .label3 > .label-radio3 {
+  background-color: brown;
+}
+
+#mem4:checked ~ .label4 > .label-radio4 {
+  background-color: brown;
+}
+
+.memslider__label-radio {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid brown;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.memslider__label {
+  display: inline-block;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  border: 50%;
+  cursor: pointer;
+  text-align: center;
 }
