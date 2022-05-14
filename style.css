@@ -1,5 +1,6 @@
 .memslider {
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
   width: 77vw;
   margin: 0 auto;
@@ -11,6 +12,30 @@
 .memslider__wrapper {
   width: 77vw;
   overflow: hidden;
+}
+
+.memslider__span-wrapper{
+  width: 20vw;
+  overflow: hidden;
+  margin-right: 40vw;
+}
+
+.memslider__spans{
+  width: 80vw;
+  display: flex;
+  transition: all 0.5s ease;
+
+}
+.memslider__span{
+  display: block;
+  width: 20vw;
+}
+
+
+.memslider__span > span{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0.6rem;
 }
 
 .memslider__slides {
@@ -33,30 +58,41 @@
   border-top-left-radius: 20px;
 }
 
-.memslider__slide > span{
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 0.6rem;
-}
 
 input[type="radio"] {
   appearance: none;
 }
 
-#mem1:checked ~ .memslider__wrapper .memslider__slides {
+#mem4:checked ~ .memslider__wrapper .memslider__slides {
   transform: translateX(0);
 }
 
-#mem2:checked ~ .memslider__wrapper .memslider__slides {
+#mem3:checked ~ .memslider__wrapper .memslider__slides {
   transform: translateX(-77vw);
 }
 
-#mem3:checked ~ .memslider__wrapper .memslider__slides {
+#mem2:checked ~ .memslider__wrapper .memslider__slides {
   transform: translateX(-154vw);
 }
 
-#mem4:checked ~ .memslider__wrapper .memslider__slides {
+#mem1:checked ~ .memslider__wrapper .memslider__slides {
   transform: translateX(-231vw);
+}
+
+#mem4:checked ~ .memslider__span-wrapper .memslider__spans{
+  transform: translateX(0vw);
+}
+
+#mem3:checked ~ .memslider__span-wrapper .memslider__spans{
+  transform: translateX(-20vw);
+}
+
+#mem2:checked ~ .memslider__span-wrapper .memslider__spans{
+  transform: translateX(-40vw);
+}
+
+#mem1:checked ~ .memslider__span-wrapper .memslider__spans{
+  transform: translateX(-60vw);
 }
 
 #mem1:checked ~ .label1 > .label-radio1,
