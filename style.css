@@ -3,6 +3,9 @@
   flex-wrap: wrap-reverse;
   width: 77vw;
   margin: 0 auto;
+  justify-content: center;
+  box-shadow: -1px 4px 8px 2px rgba(34, 60, 80, 0.27);
+  border-radius: 20px;
 }
 
 .memslider__wrapper {
@@ -16,10 +19,24 @@
   transition: all 0.5s ease;
 }
 
+.memslider__slide{
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vw;
+}
+
 .memslider__slide > img {
   display: block;
   width: 77vw;
   height: auto;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.memslider__slide > span{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0.6rem;
 }
 
 input[type="radio"] {
@@ -42,18 +59,9 @@ input[type="radio"] {
   transform: translateX(-231vw);
 }
 
-#mem1:checked ~ .label1 > .label-radio1 {
-  background-color: transparent;
-}
-
-#mem2:checked ~ .label2 > .label-radio2 {
-  background-color: transparent;
-}
-
-#mem3:checked ~ .label3 > .label-radio3 {
-  background-color: transparent;
-}
-
+#mem1:checked ~ .label1 > .label-radio1,
+#mem2:checked ~ .label2 > .label-radio2,
+#mem3:checked ~ .label3 > .label-radio3,
 #mem4:checked ~ .label4 > .label-radio4 {
   background-color: transparent;
 }
