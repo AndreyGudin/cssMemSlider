@@ -48,7 +48,7 @@
 }
 
 .memslider__span-wrapper {
-  width: 60vw;
+  width: 40vw;
   height: fit-content;
   overflow: hidden;
   grid-column: 1 / 2;
@@ -58,14 +58,14 @@
 }
 
 .memslider__spans {
-  width: 240vw;
+  width: 160vw;
   height: fit-content;
   display: flex;
   transition: all 0.5s ease;
 }
 .memslider__span {
   display: block;
-  width: 60vw;
+  width: 40vw;
   height: fit-content;
 }
 
@@ -119,15 +119,15 @@ input[type="radio"] {
 }
 
 #mem3:checked ~ .memslider__span-wrapper .memslider__spans {
-  transform: translateX(-60vw);
+  transform: translateX(-40vw);
 }
 
 #mem2:checked ~ .memslider__span-wrapper .memslider__spans {
-  transform: translateX(-120vw);
+  transform: translateX(-80vw);
 }
 
 #mem1:checked ~ .memslider__span-wrapper .memslider__spans {
-  transform: translateX(-180vw);
+  transform: translateX(-120vw);
 }
 
 #mem1:checked ~ .label1 > .label-radio1,
