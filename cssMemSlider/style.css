@@ -211,6 +211,14 @@ input[type="radio"] {
   background-color: transparent;
 }
 
+#mem1:active ~.label1:active > .label-radio1,
+#mem2:active ~.label2:active > .label-radio2,
+#mem3:active ~.label3:active > .label-radio3,
+#mem4:active ~.label4:active > .label-radio4{
+  border: 3px solid darksalmon;
+  background-color: darksalmon;
+}
+
 #mem1 ~ .label1:hover > .label-radio1,
 #mem2 ~ .label2:hover > .label-radio2,
 #mem3 ~ .label3:hover > .label-radio3,
