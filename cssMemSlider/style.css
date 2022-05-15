@@ -1,0 +1,228 @@
+.memslider {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, min-content);
+  grid-template-rows: auto auto;
+  width: 77vw;
+  margin: 0 auto;
+  justify-content: center;
+  box-shadow: -1px 4px 8px 2px rgba(34, 60, 80, 0.27);
+  border-radius: 20px;
+  justify-items: center;
+  grid-row-gap: 0.2rem;
+}
+
+.memslider__radio-button {
+  margin: 0;
+}
+
+#mem4,
+.label4,
+.label-radio4 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+#mem3,
+.label3,
+.label-radio3 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+#mem2,
+.label2,
+.label-radio2 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+#mem1,
+.label1,
+.label-radio1 {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+
+.memslider__wrapper {
+  width: 77vw;
+  overflow: hidden;
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+}
+
+.memslider__span-wrapper {
+  width: 40vw;
+  height: fit-content;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  justify-self: flex-start;
+  margin-left: 0.6rem;
+}
+
+.memslider__spans {
+  width: 160vw;
+  height: fit-content;
+  display: flex;
+  transition: all 0.5s ease;
+}
+.memslider__span {
+  display: block;
+  width: 40vw;
+  height: fit-content;
+}
+
+.memslider__span > span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.memslider__slides {
+  width: 308vw;
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.memslider__slide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vw;
+}
+
+.memslider__slide > img {
+  display: block;
+  width: 77vw;
+  height: auto;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+#mem4:checked ~ .memslider__wrapper .memslider__slides {
+  transform: translateX(0);
+}
+
+#mem3:checked ~ .memslider__wrapper .memslider__slides {
+  transform: translateX(-77vw);
+}
+
+#mem2:checked ~ .memslider__wrapper .memslider__slides {
+  transform: translateX(-154vw);
+}
+
+#mem1:checked ~ .memslider__wrapper .memslider__slides {
+  transform: translateX(-231vw);
+}
+
+#mem4:checked ~ .memslider__span-wrapper .memslider__spans {
+  transform: translateX(0vw);
+}
+
+#mem3:checked ~ .memslider__span-wrapper .memslider__spans {
+  transform: translateX(-40vw);
+}
+
+#mem2:checked ~ .memslider__span-wrapper .memslider__spans {
+  transform: translateX(-80vw);
+}
+
+#mem1:checked ~ .memslider__span-wrapper .memslider__spans {
+  transform: translateX(-120vw);
+}
+
+#mem1:checked ~ .label1 > .label-radio1,
+#mem2:checked ~ .label2 > .label-radio2,
+#mem3:checked ~ .label3 > .label-radio3,
+#mem4:checked ~ .label4 > .label-radio4 {
+  background-color: transparent;
+}
+
+@media (max-width: 434px) {
+  .memslider {
+    grid-template-columns: repeat(6, min-content);
+    grid-template-rows: auto auto auto;
+  }
+
+  .memslider__wrapper {
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+    
+
+  }
+
+  .memslider__span-wrapper {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+  }
+
+  #mem4,
+  .label4,
+  .label-radio4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  #mem3,
+  .label3,
+  .label-radio3 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  #mem2,
+  .label2,
+  .label-radio2 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+  #mem1,
+  .label1,
+  .label-radio1 {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+}
+
+.memslider__label-radio {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid brown;
+  background-color: brown;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.memslider__label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+#mem1:checked ~ .label1:hover > .label-radio1,
+#mem2:checked ~ .label2:hover > .label-radio2,
+#mem3:checked ~ .label3:hover > .label-radio3,
+#mem4:checked ~ .label4:hover > .label-radio4 {
+  border: 3px solid red;
+  background-color: transparent;
+}
+
+#mem1:active ~.label1:active > .label-radio1,
+#mem2:active ~.label2:active > .label-radio2,
+#mem3:active ~.label3:active > .label-radio3,
+#mem4:active ~.label4:active > .label-radio4{
+  border: 3px solid darksalmon;
+  background-color: darksalmon;
+}
+
+#mem1 ~ .label1:hover > .label-radio1,
+#mem2 ~ .label2:hover > .label-radio2,
+#mem3 ~ .label3:hover > .label-radio3,
+#mem4 ~ .label4:hover > .label-radio4 {
+  background-color: red;
+  border: 3px solid red;
+}
